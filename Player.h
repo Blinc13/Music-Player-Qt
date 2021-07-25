@@ -10,9 +10,11 @@ public:
   Player();
 
 public slots:
-  void Play();
+  void Play()                      ;
+  void SetMusicFile(const QString&);
 private:
   bool Playng=false;
+  sf::Music *Music;
 };
 
 #endif

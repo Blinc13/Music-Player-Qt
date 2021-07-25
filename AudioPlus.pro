@@ -1,5 +1,5 @@
 QT       += core gui
-
+LIBS     += -lsfml-audio
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -10,11 +10,13 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    Player.cpp
 
 HEADERS += \
     mainwindow.h \
-    Ui.h
+    Player.h \
+    ui_mainwindow.h
 
 FORMS += \
     mainwindow.ui

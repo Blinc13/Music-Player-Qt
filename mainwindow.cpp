@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "Player.h"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,7 +9,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     player=new Player();
-    QObject::connect(ui->pushButton,SIGNAL(clicked()),player,SLOT(Play()));
+    QObject::connect(ui->PlayButton,SIGNAL(clicked()),player,SLOT(Play()));
+    QObject::connect(ui->MusicFile,SIGNAL(returnPressed()),SLOT(setTrackName()));
+}
+
+void MainWindow::setTrackName()
+{
+    player->SetMusicFile(ui->MusicFile->text());
 }
 
 MainWindow::~MainWindow()

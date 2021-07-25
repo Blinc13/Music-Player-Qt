@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="PlayButton">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -46,33 +46,33 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="NextButton">
     <property name="geometry">
      <rect>
       <x>370</x>
       <y>390</y>
-      <width>31</width>
+      <width>41</width>
       <height>28</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Last</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="LastButton">
     <property name="geometry">
      <rect>
-      <x>247</x>
+      <x>237</x>
       <y>390</y>
-      <width>31</width>
+      <width>41</width>
       <height>28</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Next</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QRadioButton" name="MusicStat">
     <property name="geometry">
      <rect>
       <x>550</x>
@@ -91,7 +91,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="MusicFile">
     <property name="geometry">
      <rect>
       <x>0</x>

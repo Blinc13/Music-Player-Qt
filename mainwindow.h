@@ -21,10 +21,9 @@ public:
     bool MusicIsPlaing();
 private:
     Ui::Ui_MainWindow *ui;
-    QLineEdit   *TrackName;
-    QPushButton *PlayM;
     Player      *player;
 
 public slots:
+    void setTrackName();
 };
 #endif // MAINWINDOW_H
