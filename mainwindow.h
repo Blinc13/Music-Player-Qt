@@ -3,10 +3,11 @@
 
 #include <QMainWindow>
 #include <QtWidgets>
+#include "Player.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-  #include "Ui.h"
+  #include "ui_mainwindow.h"
 }
 QT_END_NAMESPACE
 
@@ -22,12 +23,8 @@ private:
     Ui::Ui_MainWindow *ui;
     QLineEdit   *TrackName;
     QPushButton *PlayM;
+    Player      *player;
 
 public slots:
-    /*
-    void PlayMusic()       ;
-    void SetTime  (int)    ;
-    void OpenTrack(QString);
-    */
 };
 #endif // MAINWINDOW_H
