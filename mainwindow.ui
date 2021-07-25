@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="FileSystem">
+   <widget class="QListView" name="listView">
     <property name="geometry">
      <rect>
       <x>655</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="PlayButton">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -46,7 +46,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="NextSong">
+   <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -59,7 +59,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="PastSong">
+   <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
       <x>247</x>
@@ -72,7 +72,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="MusicStat">
+   <widget class="QRadioButton" name="radioButton">
     <property name="geometry">
      <rect>
       <x>550</x>
@@ -91,7 +91,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="FileName">
+   <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -114,7 +114,7 @@
      <string>File patch</string>
     </property>
    </widget>
-   <widget class="QProgressBar" name="MusicProgressBar">
+   <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
       <x>0</x>
