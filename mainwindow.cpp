@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::Ui_MainWindow)
 {
     ui->setupUi(this);
-    player=new Player();
+    player=new Player(ui->MusicStat);
     QObject::connect(ui->PlayButton,SIGNAL(clicked()),player,SLOT(Play()));
     QObject::connect(ui->MusicFile,SIGNAL(returnPressed()),SLOT(setTrackName()));
 }
