@@ -6,17 +6,19 @@
 
 class Player: public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  Player(QRadioButton*);
-
-public slots:
-  void Play()                      ;
-  void SetMusicFile(const QString&);
+     Player();
+    ~Player();
 private:
-  bool Playng=false;
-  sf::Music *Music;
-  QRadioButton *MusicPlaying;
+    bool Playng=false;
+    sf::Music *Music;
+    QRadioButton *MusicPlaying;
+public slots:
+    void Play()                      ;
+    void SetMusicFile(const QString&);
+    //void SetTime(const int)          ;
+    void SetVolum(const int)         ;
 };
 
 #endif
