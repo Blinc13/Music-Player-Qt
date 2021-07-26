@@ -20,8 +20,11 @@ public:
     ~MainWindow();
     bool MusicIsPlaing();
 private:
-    Ui::Ui_MainWindow *ui;
-    Player      *player;
+    Ui::Ui_MainWindow   *ui;
+    Player          *player;
+    QFileSystemModel *model;
+private slots:
+    void Path(const QModelIndex&);
 public slots:
     void setTrackName();
 };
