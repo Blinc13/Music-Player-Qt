@@ -8,6 +8,9 @@ class Player: public QObject
 {
     Q_OBJECT
 public:
+    int Progress();
+    int Duration();
+
      Player();
     ~Player();
 private:
@@ -17,7 +20,6 @@ private:
 public slots:
     void Play()                      ;
     void SetMusicFile(const QString&);
-    //void SetTime(const int)          ;
     void SetVolum(const int)         ;
 };
 

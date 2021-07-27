@@ -26,6 +26,6 @@ private:
 private slots:
     void Path(const QModelIndex&);
 public slots:
-    void setTrackName();
+    void Play();
 };
 #endif // MAINWINDOW_H

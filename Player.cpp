@@ -1,6 +1,7 @@
 #ifndef Cpp
 #define Cpp
 #include <SFML/Audio.hpp>
+#include <SFML/System/Time.hpp>
 #include <QRadioButton>
 #include <iostream>
 #include "Player.h"
@@ -8,7 +9,7 @@
 Player::Player()
 {Music=new sf::Music();}
 
-//              slots
+
 void Player::Play()
 {
     if ((Playng=!Playng))
@@ -22,6 +23,13 @@ void Player::SetMusicFile(const QString &s)
 
 void Player::SetVolum(const int vol=100)
 {Music->setVolume(float(vol));}
+
+int Player::Progress()
+{return (int)Music->getPlayingOffset().asSeconds();}
+
+int Player::Duration()
+{return (int)Music->getDuration().asSeconds();}
+
 
 Player::~Player()
 {delete Music;}

@@ -10,26 +10,30 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent),
 
     ui->setupUi(this);
 
-    ui->treeView->setModel(model);
+    ui->FileView->setModel(model);
 
-    //              Ui
-    QObject::connect(ui->PlayButton,SIGNAL(clicked()),player,SLOT(Play())                 );
-    QObject::connect(ui->MusicFile,SIGNAL(returnPressed()),SLOT(setTrackName())           );
+    QObject::connect(ui->PlayButton,SIGNAL(clicked())/*,player*/,SLOT(Play())                 );
     QObject::connect(ui->VolumeSlider,SIGNAL(valueChanged(int)),player,SLOT(SetVolum(int)));
 
-    //              FileSystem
-    QObject::connect(ui->treeView,SIGNAL(clicked(QModelIndex)),SLOT(Path(QModelIndex)));
+    QObject::connect(ui->FileView,SIGNAL(doubleClicked(QModelIndex)),SLOT(Path(QModelIndex)));
+    //QObject::connect(ui->BackFileButton,SIGNAL(clicked()),);
 }
 
-void MainWindow::setTrackName()
-{player->SetMusicFile(ui->MusicFile->text());}
+void MainWindow::Play()
+{
+    ui->MusicTime->setValue(player->Progress());
+    player->Play();
+}
 
 void MainWindow::Path(const QModelIndex &i)
 {
     if (model->isDir(i))
-        model->setRootPath(i.data().toString());
-    else
+        ui->FileView->setRootIndex(i);
+    else{
         player->SetMusicFile(model->filePath(i));
+        ui->MusicTime->setMaximum(player->Duration());
+        ui->MusicTime->setValue(0);
+    }
 }
 
 MainWindow::~MainWindow()

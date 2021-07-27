@@ -185,6 +185,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="accessibleName">
+   <string/>
+  </property>
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
@@ -214,14 +217,20 @@ background-color:#00F900 ;
 width: 20px;
 }</string>
   </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="listView">
+   <widget class="QListView" name="FileView">
     <property name="geometry">
      <rect>
       <x>660</x>
-      <y>0</y>
+      <y>30</y>
       <width>221</width>
-      <height>441</height>
+      <height>411</height>
      </rect>
     </property>
     <property name="lineWidth">
@@ -279,7 +288,7 @@ width: 20px;
      <string>Next</string>
     </property>
    </widget>
-   <widget class="QProgressBar" name="progressBar">
+   <widget class="QProgressBar" name="MusicTime">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -289,17 +298,23 @@ width: 20px;
      </rect>
     </property>
     <property name="value">
-     <number>24</number>
+     <number>0</number>
     </property>
    </widget>
    <widget class="QSlider" name="VolumeSlider">
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>240</y>
-      <width>20</width>
+      <y>270</y>
+      <width>21</width>
       <height>141</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>100</number>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
@@ -309,6 +324,19 @@ width: 20px;
     </property>
     <property name="tickInterval">
      <number>19</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BackFileButton">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>0</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Back</string>
     </property>
    </widget>
   </widget>
